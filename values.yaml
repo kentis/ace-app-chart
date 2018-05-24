@@ -1,0 +1,47 @@
+# Default values for ace-app-chart.
+
+
+name: "ace-app-chart"
+app: "ace-app-chart"
+namespace: "ace-app-chart"
+tier: "frontend"
+
+deployment:
+  image:
+    name: ace-app-chart:latest
+    pullPolicy: Always
+    dockerRegistry: ace-app-chart
+
+  ports:
+    port: 80
+    protocol: TCP
+    name: http
+
+  replicaCount: 3
+  revisionHistoryLimit: 5
+
+  livenessProbe:
+    enabled: true
+    path: /
+    initialDelaySeconds: 15
+    timeoutSeconds: 15
+
+  readinessProbe:
+    enabled: true
+    path: /
+    initialDelaySeconds: 15
+    timeoutSeconds: 15
+
+service:
+  enabled: true
+  port: 80
+
+ingress:
+  enabled: true
+  annotations: {
+    traefik.frontend.rule.type: PathPrefix,
+    traefik.frontend.entryPoints: https
+    }
+
+  path: /
+  host: ace-app-chart.local
