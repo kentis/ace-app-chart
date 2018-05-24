@@ -3,6 +3,18 @@
 This chart will allow you to deploy your ace app into your ace cluster.
 The chart will allow you to set values that match your app without adding the yaml-files to your project.
 
+## Add the chart to your available repos
+
+```
+helm repo add evry-ace https://evry-ace.github.io/ace-app-chart/
+helm repo update
+```
+
+Test it by running
+```
+helm inspect evry-ace/ace-app-chart
+```
+
 ## Override the default values
 
 ### Use the values.yaml
@@ -16,7 +28,7 @@ Override the values you need to change for your deployment.
 #### Install your application
 
 ```
-helm upgrade --install <release name> --values <values file> <chart directory>
+helm upgrade --install <release name> --values <values file> evry-ace/ace-app-chart
 ```
 
 ### Set the values on the command
@@ -24,6 +36,6 @@ helm upgrade --install <release name> --values <values file> <chart directory>
 To override the default values you can set the value on the command directly
 
 ```
-helm upgrade --install <release name> --set ingress.enabled=false <chart directory>
+helm upgrade --install <release name> --set ingress.enabled=false evry-ace/ace-app-chart
 ```
 
