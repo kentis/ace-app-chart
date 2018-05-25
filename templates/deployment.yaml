@@ -46,7 +46,7 @@ spec:
           timeoutSeconds:  {{ .Values.deployment.livenessProbe.timeoutSeconds }}
         {{- end }}
 
-        {{- if .Values.deployment.livenessProbe.enabled }}
+        {{- if .Values.deployment.readinessProbe.enabled }}
         readinessProbe:
           httpGet:
             path: {{ .Values.deployment.readinessProbe.path }}
