@@ -41,7 +41,7 @@ ingress:
   annotations: {
     traefik.frontend.rule.type: PathPrefix,
     traefik.frontend.entryPoints: https
-    }
+  }
 
   path: /
   host: ace-app-chart.local
