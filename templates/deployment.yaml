@@ -35,7 +35,7 @@ spec:
         {{- if .Values.environment }}
         env:
         {{- range $name, $value := .Values.environment }}
-	  - {{ $name }}
+          - {{ $name }}
             {{ $value }}
         {{- end }}
         {{- end }}
