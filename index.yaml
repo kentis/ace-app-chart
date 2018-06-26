@@ -8,6 +8,6 @@ entries:
     digest: 0aebf2121856afb9e6108f9e8ef2a5a433f0d128f3bd80af10cc48c9b54e6c5c
     name: ace-app-chart
     urls:
-    - ace-app-chart-0.0.1.tgz
-    version: 0.0.1
+    - ace-app-chart-0.0.2.tgz
+    version: 0.0.2
 generated: 2018-05-24T22:46:42.299789+02:00
