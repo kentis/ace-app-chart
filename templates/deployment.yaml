@@ -32,13 +32,10 @@ spec:
       - name: {{ .Values.app }}
         image: {{ .Values.deployment.image.name }}
         imagePullPolicy:  {{ .Values.deployment.image.pullPolicy }}
-        {{- if .Values.environment }}
+{{- if .Values.environment }}
         env:
-        {{- range $name, $value := .Values.environment }}
-          - {{ $name }}
-            {{ $value }}
-        {{- end }}
-        {{- end }}
+{{ toYaml .Values.environment | indent 10 }}
+{{- end }}
         ports:
         - containerPort:  {{ .Values.deployment.ports.port }}
           protocol:  {{ .Values.deployment.ports.protocol }}
