@@ -15,6 +15,11 @@ Test it by running
 helm inspect evry-ace/ace-app-chart
 ```
 
+Update index.yaml file
+```
+helm repo index
+```
+
 ## Override the default values
 
 ### Use the values.yaml
