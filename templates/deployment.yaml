@@ -32,6 +32,13 @@ spec:
       - name: {{ .Values.app }}
         image: {{ .Values.deployment.image.name }}
         imagePullPolicy:  {{ .Values.deployment.image.pullPolicy }}
+        {{- if .Values.environment }}
+        env:
+        {{- range $name, $value := .Values.environment }}
+	  - {{ $key }}
+            {{ $value }}
+        {{- end }}
+        {{- end }}
         ports:
         - containerPort:  {{ .Values.deployment.ports.port }}
           protocol:  {{ .Values.deployment.ports.protocol }}

@@ -15,6 +15,16 @@ Test it by running
 helm inspect evry-ace/ace-app-chart
 ```
 
+Create the chart distribution
+```
+helm package .
+```
+
+Update index.yaml file
+```
+helm repo index
+```
+
 ## Override the default values
 
 ### Use the values.yaml

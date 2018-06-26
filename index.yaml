@@ -3,11 +3,20 @@ entries:
   ace-app-chart:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-05-24T22:46:42.300755+02:00
+    created: 2018-06-26T14:29:05.387141+02:00
     description: A Helm chart for ace apps in Kubernetes
-    digest: 0aebf2121856afb9e6108f9e8ef2a5a433f0d128f3bd80af10cc48c9b54e6c5c
+    digest: 843d8194d000e5b37a3195c385786aa0c96bf05761a18f32c6419dd37d8349d3
+    name: ace-app-chart
+    urls:
+    - ace-app-chart-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-06-26T14:29:05.386693+02:00
+    description: A Helm chart for ace apps in Kubernetes
+    digest: 4a83ffb3e334f9ab781fab1e0ad55f28d345f9bc82095192d134c840fd7191ba
     name: ace-app-chart
     urls:
     - ace-app-chart-0.0.1.tgz
     version: 0.0.1
-generated: 2018-05-24T22:46:42.299789+02:00
+generated: 2018-06-26T14:29:05.386111+02:00
