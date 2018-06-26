@@ -22,7 +22,12 @@ helm package .
 
 Update index.yaml file
 ```
-helm repo index
+helm repo index .
+```
+
+Check the chart
+```
+helm lint
 ```
 
 ## Override the default values
