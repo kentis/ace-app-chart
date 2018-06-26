@@ -25,6 +25,11 @@ Update index.yaml file
 helm repo index
 ```
 
+Test that it is sensible
+```
+helm lint
+```
+
 ## Override the default values
 
 ### Use the values.yaml
