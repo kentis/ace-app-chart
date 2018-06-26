@@ -19,3 +19,7 @@
 .project
 .idea/
 *.tmproj
+
+# previous charts
+*.tgz
+*.helmignore
