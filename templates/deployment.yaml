@@ -36,6 +36,10 @@ spec:
         env:
 {{ toYaml .Values.environment | indent 10 }}
 {{- end }}
+{{- if .Values.deployment.volumeMounts }}
+        volumeMounts:
+{{ toYaml .Values.deployment.volumeMounts | indent 10 }}
+{{- end }}
         ports:
         - containerPort:  {{ .Values.deployment.ports.port }}
           protocol:  {{ .Values.deployment.ports.protocol }}
@@ -58,5 +62,9 @@ spec:
           initialDelaySeconds: {{ .Values.deployment.readinessProbe.initialDelaySeconds }}
           timeoutSeconds: {{ .Values.deployment.readinessProbe.timeoutSeconds }}
         {{- end }}
+{{- if .Values.volumes }}
+      volumes:
+{{ toYaml .Values.volumes | indent 8 }}
+{{- end }}
       imagePullSecrets:
       - name: {{ .Values.deployment.image.dockerRegistry }}
